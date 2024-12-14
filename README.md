@@ -43,7 +43,9 @@ Aplikacja restauracyjna umożliwia klientom przeglądanie menu, zarządzanie kos
 | TC005   | Logowanie bez podania danych          | Strona logowania otwarta               | 1. Zostaw puste pola email i hasło.<br>2. Kliknij „Zaloguj”.                      | Komunikat: „Wszystkie pola są wymagane”.       |
 | TC006   | Rejestracja z nieprawidłowym formatem email | Strona rejestracji otwarta             | 1. Wprowadź „test” jako email.<br>2. Wprowadź hasło.<br>3. Kliknij „Zarejestruj”. | Komunikat: „Nieprawidłowy format email”.       |
 
----### **2. Menu i produkty**
+---
+
+### **2. Menu i produkty**
 
 | **ID**  | **Tytuł**                             | **Warunki początkowe**                  | **Kroki testowe**                                                                 | **Oczekiwany rezultat**                         |
 |---------|---------------------------------------|----------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------|
