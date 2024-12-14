@@ -56,6 +56,17 @@ Aplikacja restauracyjna umożliwia klientom przeglądanie menu, zarządzanie kos
 
 ---
 
+### **3. Koszyk**
+
+| **ID**  | **Tytuł**                             | **Warunki początkowe**                  | **Kroki testowe**                                                                 | **Oczekiwany rezultat**                         |
+|---------|---------------------------------------|----------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------|
+| TC013   | Dodanie produktu do koszyka           | Klient zalogowany, menu otwarte         | 1. Wybierz produkt.<br>2. Kliknij „Dodaj do koszyka”.                             | Produkt pojawia się w koszyku.                  |
+| TC014   | Zmiana ilości produktu w koszyku      | Produkt w koszyku                       | 1. Zmień ilość produktu na 2.<br>2. Zapisz zmiany.                                | Ilość produktu zmienia się poprawnie.           |
+| TC015   | Usunięcie produktu z koszyka          | Produkt w koszyku                       | 1. Kliknij „Usuń” przy produkcie.                                                | Produkt znika z koszyka.                        |
+| TC016   | Przeglądanie podsumowania koszyka     | Produkt w koszyku                       | 1. Przejdź do sekcji „Koszyk”.                                                   | Wyświetla się lista produktów oraz łączna cena. |
+
+---
+
 ## **Autorzy**
 
 - **Imię Nazwisko** - Magdalena Kłósek, Wszołek Konrad
