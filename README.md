@@ -43,10 +43,21 @@ Aplikacja restauracyjna umożliwia klientom przeglądanie menu, zarządzanie kos
 | TC005   | Logowanie bez podania danych          | Strona logowania otwarta               | 1. Zostaw puste pola email i hasło.<br>2. Kliknij „Zaloguj”.                      | Komunikat: „Wszystkie pola są wymagane”.       |
 | TC006   | Rejestracja z nieprawidłowym formatem email | Strona rejestracji otwarta             | 1. Wprowadź „test” jako email.<br>2. Wprowadź hasło.<br>3. Kliknij „Zarejestruj”. | Komunikat: „Nieprawidłowy format email”.       |
 
+---### **2. Menu i produkty**
+
+| **ID**  | **Tytuł**                             | **Warunki początkowe**                  | **Kroki testowe**                                                                 | **Oczekiwany rezultat**                         |
+|---------|---------------------------------------|----------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------|
+| TC007   | Wyświetlanie listy menu               | Klient zalogowany                      | 1. Przejdź do sekcji „Menu”.                                                     | Lista produktów wyświetla się poprawnie.       |
+| TC008   | Dodanie nowego produktu (manager)     | Menedżer zalogowany                    | 1. Kliknij „Dodaj produkt”. <br>2. Uzupełnij pola: nazwa, cena, kategoria. <br>3. Zapisz. | Produkt pojawia się w menu.                    |
+| TC009   | Usuwanie produktu z menu              | Menedżer zalogowany, produkt istnieje  | 1. Kliknij „Usuń” przy produkcie. <br>2. Potwierdź akcję.                         | Produkt znika z listy menu.                    |
+| TC010   | Edycja istniejącego produktu          | Menedżer zalogowany, produkt istnieje  | 1. Kliknij „Edytuj”. <br>2. Zmień nazwę produktu.<br>3. Zapisz zmiany.            | Zmiany w produkcie są widoczne w menu.         |
+| TC011   | Dodanie produktu bez nazwy            | Menedżer zalogowany                    | 1. Kliknij „Dodaj produkt”. <br>2. Zostaw pole nazwa puste.<br>3. Zapisz.         | Komunikat: „Pole nazwa jest wymagane”.         |
+| TC012   | Przeglądanie menu z podziałem na kategorie | Klient zalogowany                      | 1. Otwórz menu.<br>2. Wybierz kategorię „Desery”.                                 | Wyświetlają się produkty tylko z tej kategorii. |
+
 ---
 
 ## **Autorzy**
 
-- **Imię Nazwisko** - Magdalen Kłósek, Wszołek Konrad
+- **Imię Nazwisko** - Magdalena Kłósek, Wszołek Konrad
 
 
