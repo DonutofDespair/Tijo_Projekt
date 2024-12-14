@@ -2,7 +2,7 @@
 
 ## **Opis projektu**
 
-Aplikacja restauracyjna umożliwia klientom przeglądanie menu, zarządzanie koszykiem i składanie zamówień. Menedżerowie mogą dodawać, edytować oraz usuwać produkty, a także zarządzać zamówieniami. System oferuje rejestrację i logowanie użytkowników oraz walidację danych.
+Aplikacja restauracyjna umożliwia klientom przeglądanie menu, zarządzanie koszykiem i składanie zamówień. Menedżerowie mogą dodawać, edytować oraz usuwać produkty, a także zarządzać zamówieniami. System oferuje rejestrację i logowanie użytkowników.
 
 ---
 
@@ -26,11 +26,7 @@ Aplikacja restauracyjna umożliwia klientom przeglądanie menu, zarządzanie kos
 
 ### **Dla menedżera:**
 1. Dodawanie, edytowanie i usuwanie produktów w menu.  
-2. Zarządzanie zamówieniami: zmiana statusu, usuwanie, filtrowanie.  
-
-### **Obsługa błędów:**
-- Walidacja danych podczas rejestracji, logowania oraz dodawania produktów.  
-- Informowanie użytkownika o brakach lub błędach danych.  
+2. Zarządzanie zamówieniami: zmiana statusu, usuwanie, filtrowanie.   
 
 ---
 
