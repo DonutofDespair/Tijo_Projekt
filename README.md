@@ -69,6 +69,17 @@ Aplikacja restauracyjna umożliwia klientom przeglądanie menu, zarządzanie kos
 
 ---
 
+### **4. Zamówienia**
+
+| ID      | Tytuł                                    | Warunki początkowe                       | Kroki testowe                                                                | Oczekiwany rezultat                         |
+|---------|------------------------------------------|------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------|
+| TC017   | Składanie zamówienia z koszyka           | Produkty w koszyku                       | 1. Kliknij „Zamów”.<br>2. Potwierdź dane.                                    | Zamówienie zostaje złożone.                    |
+| TC018   | Przeglądanie statusu zamówienia          | Klient ma aktywne zamówienie             | 1. Przejdź do sekcji „Moje zamówienia”.                                      | Status zamówienia wyświetla się poprawnie.     |
+| TC019   | Zmiana statusu zamówienia przez managera | Menedżer zalogowany, zamówienie istnieje | 1. Zmień status na „W trakcie realizacji”.                                   | Status zamówienia zmienia się poprawnie.       |
+| TC020   | Usunięcie zamówienia (manager)           | Menedżer zalogowany, zamówienie istnieje | 1. Kliknij „Usuń zamówienie”.<br>2. Potwierdź akcję.                         | Zamówienie zostaje usunięte.                   |
+
+---
+
 ## **Autorzy**
 
 - **Imię Nazwisko** - Magdalena Kłósek, Wszołek Konrad
