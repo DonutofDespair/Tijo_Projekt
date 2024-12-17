@@ -147,5 +147,15 @@ class OrdersControllerTest {
         assertEquals(mockOrder.getId(), response.getBody().getId());
         verify(ordersService, times(1)).saveNewItem();
     }
+    @Test
+    void whenCreateOrderFails_thenThrowResponseStatusException() {
+        // Given
+        when(ordersService.saveNewItem()).thenThrow(new NoSuchElementException("Basket is empty"));
+
+        // When / Then
+        ResponseStatusException exception = assertThrows(ResponseStatusException.class, () -> ordersController.create());
+        assertEquals(HttpStatus.BAD_REQUEST, exception.getStatus());
+        assertEquals("Basket is empty", exception.getReason());
+    }
 
 }
