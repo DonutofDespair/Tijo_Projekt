@@ -51,7 +51,6 @@ class MainControllerTest {
                 .thenReturn(pageableDishesDTO);
 
         when(bundler.getLogMsg(Constants.DISHES_ALL_PAGE)).thenReturn("Fetching page of dishes: ");
-
         // When
         ResponseEntity<PageableDishesDTO> response = mainController.findPaginated(pageNo, sortField, sortDirection, categoryId);
 
