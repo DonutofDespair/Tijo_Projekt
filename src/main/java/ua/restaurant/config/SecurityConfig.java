@@ -16,7 +16,6 @@ import ua.restaurant.security.UserDetailsServiceImpl;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final UserDetailsServiceImpl userDetailsServiceImpl;
-
     private static final String[] SWAGGER_WHITE_LIST = {
             "/swagger-ui/**",
             "/v2/api-docs",
@@ -37,11 +36,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable() // Wyłączenie CSRF
                 .authorizeRequests()
-                .antMatchers("/", "/signup", "/api/get/**", "/css/*", "/js/*").permitAll()
-                .antMatchers("/manager/**").hasAuthority(RoleType.ROLE_MANAGER.name())
-                .antMatchers(SWAGGER_WHITE_LIST).hasAuthority(RoleType.ROLE_MANAGER.name())
+                    .antMatchers("/", "/signup", "/api/get/**", "/css/*", "/js/*").permitAll()
+                    .antMatchers("/manager/**").hasAuthority(RoleType.ROLE_MANAGER.name())
+                    .antMatchers(SWAGGER_WHITE_LIST).hasAuthority(RoleType.ROLE_MANAGER.name())
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -50,6 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .permitAll();
+
     }
 
     @Override
@@ -63,4 +62,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+
 }
