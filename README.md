@@ -234,6 +234,69 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ---
 
+## Testy integracyjne
+
+### 1. **Testy dla repozytorium `BasketRepository`**
+Testy repozytorium `BasketRepository` sprawdzają funkcjonalności związane z koszykami użytkowników. Obejmuje to m.in. operacje dodawania nowych pozycji do koszyka, usuwania oraz pobierania koszyków użytkownika na podstawie jego ID.
+
+#### Testy obejmują:
+- **Pobieranie koszyków na podstawie ID użytkownika** – Sprawdzamy, czy poprawnie zwracane są koszyki powiązane z danym użytkownikiem.
+- **Pobieranie koszyków na podstawie ID dania** – Testujemy możliwość wyszukiwania koszyków zawierających konkretne danie.
+- **Usuwanie koszyków użytkownika** – Weryfikujemy, czy koszyk użytkownika jest prawidłowo usuwany.
+
+### 2. **Testy dla repozytorium `CategoriesRepository`**
+Testy dla repozytorium `CategoriesRepository` sprawdzają operacje na kategoriach dań, takie jak dodawanie nowych kategorii oraz pobieranie wszystkich kategorii zapisanych w bazie.
+
+#### Testy obejmują:
+- **Dodawanie nowej kategorii** – Testujemy dodanie nowej kategorii i sprawdzamy, czy jest ona poprawnie zapisana w bazie.
+- **Pobieranie wszystkich kategorii** – Sprawdzamy, czy wszystkie zapisane kategorie są poprawnie zwracane przez repozytorium.
+
+### 3. **Testy dla repozytorium `DishesRepository`**
+Repozytorium `DishesRepository` odpowiada za operacje na daniach, a testy integracyjne zapewniają, że operacje dodawania, aktualizacji oraz usuwania dań działają poprawnie.
+
+#### Testy obejmują:
+- **Dodawanie nowego dania** – Testujemy, czy nowe danie jest prawidłowo zapisywane w bazie danych.
+- **Aktualizacja istniejącego dania** – Sprawdzamy, czy zmiany w istniejącym daniu są poprawnie zapisywane.
+- **Usuwanie dania** – Weryfikujemy, czy usunięcie dania odbywa się poprawnie.
+- **Pobieranie dań według nazwy** – Testujemy możliwość wyszukiwania dań na podstawie nazwy w języku angielskim.
+- **Pobieranie dań według kategorii** – Sprawdzamy, czy dania są poprawnie zwracane na podstawie przypisanej kategorii.
+
+### 4. **Testy dla repozytorium `LoginsRepository`**
+Testy repozytorium `LoginsRepository` sprawdzają operacje na użytkownikach systemu, takie jak rejestracja, logowanie oraz usuwanie użytkowników. Testy zapewniają poprawność działania takich funkcji, jak dodawanie nowych użytkowników, wyszukiwanie po loginie oraz sprawdzanie unikalności loginów.
+
+#### Testy obejmują:
+- **Dodawanie nowego użytkownika** – Testujemy poprawność zapisu nowego użytkownika w bazie.
+- **Pobieranie użytkownika po loginie** – Weryfikujemy, czy użytkownicy są poprawnie wyszukiwani po loginie.
+- **Usuwanie użytkownika** – Sprawdzamy, czy użytkownicy mogą być poprawnie usuwani.
+- **Wykrywanie duplikatów loginów** – Testujemy, czy system poprawnie reaguje na próbę zapisu użytkownika z istniejącym loginem.
+
+### 5. **Testy dla repozytorium `OrdersRepository`**
+Testy repozytorium `OrdersRepository` koncentrują się na operacjach związanych z zamówieniami użytkowników, takich jak dodawanie nowych zamówień, aktualizacja statusów oraz pobieranie zamówień na podstawie różnych kryteriów.
+
+#### Testy obejmują:
+- **Dodawanie nowego zamówienia** – Sprawdzamy, czy zamówienia są poprawnie zapisywane w bazie danych.
+- **Aktualizacja statusu zamówienia** – Weryfikujemy, czy zmiana statusu zamówienia działa zgodnie z oczekiwaniami.
+- **Pobieranie zamówień po ID użytkownika** – Testujemy, czy zamówienia są prawidłowo pobierane dla konkretnego użytkownika.
+- **Sprawdzanie poprawności danych zamówienia** – Testujemy, czy zamówienia zawierają prawidłowe dane, takie jak cena oraz status.
+
+### 6. **Testy dla repozytorium `OrdersRepository` z niepoprawnymi danymi**
+Testy te sprawdzają, czy system poprawnie obsługuje błędy, takie jak niepoprawne dane, w przypadku zapisu zamówienia z błędną ceną (np. ujemną ceną).
+
+---
+
+### Narzędzia i technologie
+- **Spring Boot** – Używamy Spring Boot do tworzenia aplikacji i konfiguracji testów.
+- **JUnit 5** – Używamy JUnit 5 do pisania testów jednostkowych i integracyjnych.
+- **H2 Database** – Do testów wykorzystywana jest baza danych H2, która działa w pamięci, co zapewnia szybkie testowanie bez wpływu na produkcyjne dane.
+- **AssertJ** – Do asercji wyników testów używamy biblioteki AssertJ, co pozwala na pisanie czytelnych i elastycznych testów.
+
+---
+
+Te testy integracyjne są niezbędnym narzędziem do zapewnienia stabilności aplikacji. Pozwalają one na wykrywanie problemów związanych z interakcjami między różnymi komponentami systemu oraz umożliwiają szybkie reagowanie na zmiany w bazie danych i kodzie aplikacji.
+
+
+---
+
 ## **Autorzy**
 
 - **Imię Nazwisko** - Magdalena Kłósek, Wszołek Konrad
