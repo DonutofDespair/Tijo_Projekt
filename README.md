@@ -135,6 +135,105 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ---
 
+## Testy dla `Categories`
+
+### Lista testów:
+
+1. **Test tworzenia obiektu Categories**  
+   Sprawdza, czy obiekt `Categories` jest tworzony poprawnie na podstawie danych wejściowych.
+
+   - **Testowana metoda:** `builder()`
+   - **Przykład danych wejściowych:**  
+     ```java
+     Long expectedId = 1L;
+     String expectedCategory = "Food";
+     ```
+   - **Oczekiwany wynik:**  
+     Obiekt `Categories` ma przypisane poprawne wartości pól `id` i `categoryEn`.
+
+2. **Test metody `toString()`**  
+   Sprawdza, czy metoda `toString()` zwraca poprawny ciąg znaków opisujący obiekt.
+
+   - **Przykład danych wyjściowych:**  
+     `"Categories(id=1, categoryEn=Food)"`
+
+---
+
+## Testy dla `Dishes`
+
+### Lista testów:
+
+1. **Walidacja poprawności pola `nameEn`**  
+   Sprawdza, czy pole `nameEn` przechodzi walidację dla niepoprawnych wartości, takich jak zawierające znaki specjalne.
+
+   - **Przykład danych wejściowych:**  
+     `"Invalid@Name!"`
+   - **Oczekiwany wynik:**  
+     Walidacja powinna zakończyć się niepowodzeniem.
+
+2. **Test generowania ID**  
+   Weryfikuje, czy ID dla obiektu `Dishes` jest generowane poprawnie.
+
+   - **Oczekiwany wynik:**  
+     Pole `id` nie jest `null` i zgadza się z podaną wartością.
+
+3. **Test relacji z kategorią**  
+   Sprawdza, czy kategoria jest poprawnie przypisywana do dania.
+
+   - **Oczekiwany wynik:**  
+     Obiekt `Categories` jest powiązany z daniem i nie jest `null`.
+
+---
+
+## Testy dla `Orders`
+
+### Lista testów:
+
+1. **Test ustawiania statusu zamówienia**  
+   Sprawdza, czy pole `status` jest poprawnie ustawiane.
+
+   - **Przykład danych wejściowych:**  
+     `Status.NEW`
+   - **Oczekiwany wynik:**  
+     Wartość pola `status` zgadza się z oczekiwaną.
+
+2. **Test ustawiania całkowitej ceny**  
+   Sprawdza, czy pole `totalPrice` jest poprawnie ustawiane.
+
+   - **Przykład danych wejściowych:**  
+     `BigDecimal.valueOf(100.50)`
+   - **Oczekiwany wynik:**  
+     Wartość pola `totalPrice` zgadza się z oczekiwaną.
+
+3. **Test przypisywania logowania użytkownika**  
+   Sprawdza, czy obiekt `Logins` jest poprawnie przypisywany do zamówienia.
+
+   - **Przykład danych wejściowych:**  
+     Obiekt `Logins` z `id = 1L`.
+   - **Oczekiwany wynik:**  
+     Obiekt `Logins` jest poprawnie przypisany do zamówienia.
+
+4. **Test ustawiania czasu zamówienia**  
+   Weryfikuje, czy pole `time` jest poprawnie ustawiane.
+
+   - **Przykład danych wejściowych:**  
+     `LocalDateTime.now()`
+   - **Oczekiwany wynik:**  
+     Wartość pola `time` zgadza się z oczekiwaną.
+
+5. **Kompletny test konfiguracji zamówienia**  
+   Testuje pełną konfigurację zamówienia, w tym pola `status`, `totalPrice`, `time` oraz relację z użytkownikiem.
+
+   - **Przykład danych wejściowych:**  
+     - `Status.PAYED`
+     - `BigDecimal.valueOf(250.75)`
+     - `LocalDateTime.now()`
+     - Obiekt `Logins` z `id = 2L`.
+   - **Oczekiwany wynik:**  
+     Wszystkie pola są poprawnie ustawione, a relacje są prawidłowe.
+
+---
+
 ## **Autorzy**
 
 - **Imię Nazwisko** - Magdalena Kłósek, Wszołek Konrad
