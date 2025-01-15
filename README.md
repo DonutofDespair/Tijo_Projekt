@@ -135,7 +135,7 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ---
 
-## Testy dla `Categories`
+###  **CategoriesTest**
 
 ### Lista testów:
 
@@ -159,7 +159,7 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ---
 
-## Testy dla `Dishes`
+###  **DishesTest**
 
 ### Lista testów:
 
@@ -185,7 +185,7 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ---
 
-## Testy dla `Orders`
+###  **OrdersTest**
 
 ### Lista testów:
 
