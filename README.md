@@ -279,22 +279,6 @@ Testy repozytorium `OrdersRepository` koncentrują się na operacjach związanyc
 - **Pobieranie zamówień po ID użytkownika** – Testujemy, czy zamówienia są prawidłowo pobierane dla konkretnego użytkownika.
 - **Sprawdzanie poprawności danych zamówienia** – Testujemy, czy zamówienia zawierają prawidłowe dane, takie jak cena oraz status.
 
-### 6. **Testy dla repozytorium `OrdersRepository` z niepoprawnymi danymi**
-Testy te sprawdzają, czy system poprawnie obsługuje błędy, takie jak niepoprawne dane, w przypadku zapisu zamówienia z błędną ceną (np. ujemną ceną).
-
----
-
-### Narzędzia i technologie
-- **Spring Boot** – Używamy Spring Boot do tworzenia aplikacji i konfiguracji testów.
-- **JUnit 5** – Używamy JUnit 5 do pisania testów jednostkowych i integracyjnych.
-- **H2 Database** – Do testów wykorzystywana jest baza danych H2, która działa w pamięci, co zapewnia szybkie testowanie bez wpływu na produkcyjne dane.
-- **AssertJ** – Do asercji wyników testów używamy biblioteki AssertJ, co pozwala na pisanie czytelnych i elastycznych testów.
-
----
-
-Te testy integracyjne są niezbędnym narzędziem do zapewnienia stabilności aplikacji. Pozwalają one na wykrywanie problemów związanych z interakcjami między różnymi komponentami systemu oraz umożliwiają szybkie reagowanie na zmiany w bazie danych i kodzie aplikacji.
-
-
 ---
 
 ## **Autorzy**
