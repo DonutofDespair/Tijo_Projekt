@@ -80,6 +80,61 @@ Aplikacja restauracyjna umożliwia klientom przeglądanie menu, zarządzanie kos
 
 ---
 
+## Testy jednostkowe
+
+Projekt zawiera testy jednostkowe dla kluczowych kontrolerów. Poniżej opisano pokrycie funkcjonalne oraz główne przypadki testowe.
+
+### 1. **CategoriesControllerTest**
+Testy dla kontrolera obsługującego kategorie.
+
+#### Przypadki testowe:
+1. **Kiedy kategorie istnieją**:
+   - Zwrot listy kategorii.
+   - Status odpowiedzi: `200 OK`.
+   - Sprawdzenie poprawności danych w odpowiedzi.
+2. **Kiedy kategorie nie istnieją**:
+   - Zwrot pustej listy.
+   - Status odpowiedzi: `200 OK`.
+3. **Logowanie**:
+   - Sprawdzenie wywołania logów w metodzie `getAllDishes`.
+
+---
+
+### 2. **MainControllerTest**
+Testy dla kontrolera obsługującego paginację dań.
+
+#### Przypadki testowe:
+1. **Poprawne dane wejściowe**:
+   - Zwrot danych paginowanych.
+   - Status odpowiedzi: `200 OK`.
+2. **Błąd wewnętrzny (np. problem z bazą danych)**:
+   - Rzucenie wyjątku `ResponseStatusException`.
+   - Status odpowiedzi: `400 BAD REQUEST`.
+3. **Logowanie**:
+   - Sprawdzenie wywołania logów w metodzie `findPaginated`.
+
+---
+
+### 3. **OrdersControllerTest**
+Testy dla kontrolera obsługującego zamówienia.
+
+#### Przypadki testowe:
+1. **Pobieranie zamówień użytkownika**:
+   - Zwrot listy zamówień.
+   - Status odpowiedzi: `200 OK`.
+   - Obsługa pustej listy zamówień.
+2. **Pobieranie wszystkich zamówień (dla menedżera)**:
+   - Zwrot listy zamówień.
+   - Status odpowiedzi: `200 OK`.
+3. **Tworzenie zamówienia**:
+   - Zwrot utworzonego zamówienia.
+   - Obsługa błędów (np. brak elementów w koszyku) – rzucenie `ResponseStatusException`.
+   - Status odpowiedzi: `400 BAD REQUEST` w przypadku błędów.
+4. **Logowanie**:
+   - Sprawdzenie wywołania logów w metodach.
+
+---
+
 ## **Autorzy**
 
 - **Imię Nazwisko** - Magdalena Kłósek, Wszołek Konrad
