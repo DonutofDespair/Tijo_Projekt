@@ -88,7 +88,7 @@ Projekt zawiera testy jednostkowe dla kluczowych kontrolerów. Poniżej opisano 
 Testy dla kontrolera obsługującego kategorie.
 
 #### Przypadki testowe:
-1. **Kiedy kategorie istnieją**:
+1. **Kiedy kategorie istnieją**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/CategoriesControllerTest.java#L45-L60)
    - Zwrot listy kategorii.
    - Status odpowiedzi: `200 OK`.
    - Sprawdzenie poprawności danych w odpowiedzi.
