@@ -139,7 +139,7 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ### Lista testów:
 
-1. **Test tworzenia obiektu Categories**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/CategoriesTest.java#L9-L23)
+1. **Test tworzenia obiektu Categories**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/CategoriesTest.java#L9-L23) <br>
    Sprawdza, czy obiekt `Categories` jest tworzony poprawnie na podstawie danych wejściowych.
 
    - **Testowana metoda:** `builder()`
@@ -151,7 +151,7 @@ Testy dla kontrolera obsługującego zamówienia.
    - **Oczekiwany wynik:**  
      Obiekt `Categories` ma przypisane poprawne wartości pól `id` i `categoryEn`.
 
-2. **Test metody `toString()`**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/CategoriesTest.java#L26-L38)
+2. **Test metody `toString()`**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/CategoriesTest.java#L26-L38) <br>
    Sprawdza, czy metoda `toString()` zwraca poprawny ciąg znaków opisujący obiekt.
 
    - **Przykład danych wyjściowych:**  
@@ -163,7 +163,7 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ### Lista testów:
 
-1. **Walidacja poprawności pola `nameEn`**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/DishesTest.java#L43-L51)
+1. **Walidacja poprawności pola `nameEn`**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/DishesTest.java#L43-L51) <br>
    Sprawdza, czy pole `nameEn` przechodzi walidację dla niepoprawnych wartości, takich jak zawierające znaki specjalne.
 
    - **Przykład danych wejściowych:**  
@@ -171,13 +171,13 @@ Testy dla kontrolera obsługującego zamówienia.
    - **Oczekiwany wynik:**  
      Walidacja powinna zakończyć się niepowodzeniem.
 
-2. **Test generowania ID**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/DishesTest.java#L54-L64)
+2. **Test generowania ID**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/DishesTest.java#L54-L64) <br>
    Weryfikuje, czy ID dla obiektu `Dishes` jest generowane poprawnie.
 
    - **Oczekiwany wynik:**  
      Pole `id` nie jest `null` i zgadza się z podaną wartością.
 
-3. **Test relacji z kategorią**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/DishesTest.java#L76-L77)
+3. **Test relacji z kategorią**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/DishesTest.java#L76-L77) <br>
    Sprawdza, czy kategoria jest poprawnie przypisywana do dania.
 
    - **Oczekiwany wynik:**  
