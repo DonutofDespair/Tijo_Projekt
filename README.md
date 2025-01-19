@@ -139,7 +139,7 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ### Lista testów:
 
-1. **Test tworzenia obiektu Categories**  
+1. **Test tworzenia obiektu Categories**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/CategoriesTest.java#L9-L23)
    Sprawdza, czy obiekt `Categories` jest tworzony poprawnie na podstawie danych wejściowych.
 
    - **Testowana metoda:** `builder()`
@@ -151,7 +151,7 @@ Testy dla kontrolera obsługującego zamówienia.
    - **Oczekiwany wynik:**  
      Obiekt `Categories` ma przypisane poprawne wartości pól `id` i `categoryEn`.
 
-2. **Test metody `toString()`**  
+2. **Test metody `toString()`**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/CategoriesTest.java#L26-L38)
    Sprawdza, czy metoda `toString()` zwraca poprawny ciąg znaków opisujący obiekt.
 
    - **Przykład danych wyjściowych:**  
@@ -163,7 +163,7 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ### Lista testów:
 
-1. **Walidacja poprawności pola `nameEn`**  
+1. **Walidacja poprawności pola `nameEn`**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/DishesTest.java#L43-L51)
    Sprawdza, czy pole `nameEn` przechodzi walidację dla niepoprawnych wartości, takich jak zawierające znaki specjalne.
 
    - **Przykład danych wejściowych:**  
@@ -171,13 +171,13 @@ Testy dla kontrolera obsługującego zamówienia.
    - **Oczekiwany wynik:**  
      Walidacja powinna zakończyć się niepowodzeniem.
 
-2. **Test generowania ID**  
+2. **Test generowania ID**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/DishesTest.java#L54-L64)
    Weryfikuje, czy ID dla obiektu `Dishes` jest generowane poprawnie.
 
    - **Oczekiwany wynik:**  
      Pole `id` nie jest `null` i zgadza się z podaną wartością.
 
-3. **Test relacji z kategorią**  
+3. **Test relacji z kategorią**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/DishesTest.java#L76-L77)
    Sprawdza, czy kategoria jest poprawnie przypisywana do dania.
 
    - **Oczekiwany wynik:**  
@@ -236,7 +236,7 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ## Testy integracyjne
 
-### 1. **Testy dla repozytorium `BasketRepository`**
+### 1. **Testy dla repozytorium `BasketRepository`** [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/repository/BasketRepositoryIntegrationTest.java)
 Testy repozytorium `BasketRepository` sprawdzają funkcjonalności związane z koszykami użytkowników. Obejmuje to m.in. operacje dodawania nowych pozycji do koszyka, usuwania oraz pobierania koszyków użytkownika na podstawie jego ID.
 
 #### Testy obejmują:
@@ -244,7 +244,7 @@ Testy repozytorium `BasketRepository` sprawdzają funkcjonalności związane z k
 - **Pobieranie koszyków na podstawie ID dania** – Testujemy możliwość wyszukiwania koszyków zawierających konkretne danie.
 - **Usuwanie koszyków użytkownika** – Weryfikujemy, czy koszyk użytkownika jest prawidłowo usuwany.
 
-### 2. **Testy dla repozytorium `CategoriesRepository`**
+### 2. **Testy dla repozytorium `CategoriesRepository`** [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/repository/CategoriesRepositoryIntegrationTest.java)
 Testy dla repozytorium `CategoriesRepository` sprawdzają operacje na kategoriach dań, takie jak dodawanie nowych kategorii oraz pobieranie wszystkich kategorii zapisanych w bazie.
 
 #### Testy obejmują:
@@ -261,7 +261,7 @@ Repozytorium `DishesRepository` odpowiada za operacje na daniach, a testy integr
 - **Pobieranie dań według nazwy** – Testujemy możliwość wyszukiwania dań na podstawie nazwy w języku angielskim.
 - **Pobieranie dań według kategorii** – Sprawdzamy, czy dania są poprawnie zwracane na podstawie przypisanej kategorii.
 
-### 4. **Testy dla repozytorium `LoginsRepository`**
+### 4. **Testy dla repozytorium `LoginsRepository`** [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/repository/LoginsRepositoryIntegrationTest.java)
 Testy repozytorium `LoginsRepository` sprawdzają operacje na użytkownikach systemu, takie jak rejestracja, logowanie oraz usuwanie użytkowników. Testy zapewniają poprawność działania takich funkcji, jak dodawanie nowych użytkowników, wyszukiwanie po loginie oraz sprawdzanie unikalności loginów.
 
 #### Testy obejmują:
