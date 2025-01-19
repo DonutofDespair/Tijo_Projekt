@@ -104,13 +104,13 @@ Testy dla kontrolera obsługującego kategorie.
 Testy dla kontrolera obsługującego paginację dań.
 
 #### Przypadki testowe:
-1. **Poprawne dane wejściowe**:
+1. **Poprawne dane wejściowe**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/MainControllerTest.java#L42-L62)
    - Zwrot danych paginowanych.
    - Status odpowiedzi: `200 OK`.
-2. **Błąd wewnętrzny (np. problem z bazą danych)**:
+2. **Błąd wewnętrzny (np. problem z bazą danych)**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/MainControllerTest.java#L64-L83)
    - Rzucenie wyjątku `ResponseStatusException`.
    - Status odpowiedzi: `400 BAD REQUEST`.
-3. **Logowanie**:
+3. **Logowanie**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/MainControllerTest.java#L85-L102)
    - Sprawdzenie wywołania logów w metodzie `findPaginated`.
 
 ---
@@ -119,18 +119,18 @@ Testy dla kontrolera obsługującego paginację dań.
 Testy dla kontrolera obsługującego zamówienia.
 
 #### Przypadki testowe:
-1. **Pobieranie zamówień użytkownika**:
+1. **Pobieranie zamówień użytkownika**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/OrdersControllerTest.java#L88-L103)
    - Zwrot listy zamówień.
    - Status odpowiedzi: `200 OK`.
    - Obsługa pustej listy zamówień.
-2. **Pobieranie wszystkich zamówień (dla menedżera)**:
+2. **Pobieranie wszystkich zamówień (dla menedżera)**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/OrdersControllerTest.java#L105-L117)
    - Zwrot listy zamówień.
    - Status odpowiedzi: `200 OK`.
-3. **Tworzenie zamówienia**:
+3. **Tworzenie zamówienia**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/OrdersControllerTest.java#L119-L133)
    - Zwrot utworzonego zamówienia.
    - Obsługa błędów (np. brak elementów w koszyku) – rzucenie `ResponseStatusException`.
    - Status odpowiedzi: `400 BAD REQUEST` w przypadku błędów.
-4. **Logowanie**:
+4. **Logowanie**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/OrdersControllerTest.java#L150-L159)
    - Sprawdzenie wywołania logów w metodach.
 
 ---
@@ -189,7 +189,7 @@ Testy dla kontrolera obsługującego zamówienia.
 
 ### Lista testów:
 
-1. **Test ustawiania statusu zamówienia**  
+1. **Test ustawiania statusu zamówienia**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/OrdersTest.java#L29-L39) <br>
    Sprawdza, czy pole `status` jest poprawnie ustawiane.
 
    - **Przykład danych wejściowych:**  
@@ -197,7 +197,7 @@ Testy dla kontrolera obsługującego zamówienia.
    - **Oczekiwany wynik:**  
      Wartość pola `status` zgadza się z oczekiwaną.
 
-2. **Test ustawiania całkowitej ceny**  
+2. **Test ustawiania całkowitej ceny**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/OrdersTest.java#L41-L51) <br>
    Sprawdza, czy pole `totalPrice` jest poprawnie ustawiane.
 
    - **Przykład danych wejściowych:**  
@@ -205,7 +205,7 @@ Testy dla kontrolera obsługującego zamówienia.
    - **Oczekiwany wynik:**  
      Wartość pola `totalPrice` zgadza się z oczekiwaną.
 
-3. **Test przypisywania logowania użytkownika**  
+3. **Test przypisywania logowania użytkownika**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/OrdersTest.java#L54-L65) <br>
    Sprawdza, czy obiekt `Logins` jest poprawnie przypisywany do zamówienia.
 
    - **Przykład danych wejściowych:**  
@@ -213,7 +213,7 @@ Testy dla kontrolera obsługującego zamówienia.
    - **Oczekiwany wynik:**  
      Obiekt `Logins` jest poprawnie przypisany do zamówienia.
 
-4. **Test ustawiania czasu zamówienia**  
+4. **Test ustawiania czasu zamówienia**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/OrdersTest.java#L67-L77) <br>
    Weryfikuje, czy pole `time` jest poprawnie ustawiane.
 
    - **Przykład danych wejściowych:**  
@@ -221,7 +221,7 @@ Testy dla kontrolera obsługującego zamówienia.
    - **Oczekiwany wynik:**  
      Wartość pola `time` zgadza się z oczekiwaną.
 
-5. **Kompletny test konfiguracji zamówienia**  
+5. **Kompletny test konfiguracji zamówienia**  [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/entity/OrdersTest.java#L79-L99) <br>
    Testuje pełną konfigurację zamówienia, w tym pola `status`, `totalPrice`, `time` oraz relację z użytkownikiem.
 
    - **Przykład danych wejściowych:**  
@@ -251,7 +251,7 @@ Testy dla repozytorium `CategoriesRepository` sprawdzają operacje na kategoriac
 - **Dodawanie nowej kategorii** – Testujemy dodanie nowej kategorii i sprawdzamy, czy jest ona poprawnie zapisana w bazie.
 - **Pobieranie wszystkich kategorii** – Sprawdzamy, czy wszystkie zapisane kategorie są poprawnie zwracane przez repozytorium.
 
-### 3. **Testy dla repozytorium `DishesRepository`**
+### 3. **Testy dla repozytorium `DishesRepository`** [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/repository/DishesRepositoryIntegrationTest.java)
 Repozytorium `DishesRepository` odpowiada za operacje na daniach, a testy integracyjne zapewniają, że operacje dodawania, aktualizacji oraz usuwania dań działają poprawnie.
 
 #### Testy obejmują:
@@ -270,7 +270,7 @@ Testy repozytorium `LoginsRepository` sprawdzają operacje na użytkownikach sys
 - **Usuwanie użytkownika** – Sprawdzamy, czy użytkownicy mogą być poprawnie usuwani.
 - **Wykrywanie duplikatów loginów** – Testujemy, czy system poprawnie reaguje na próbę zapisu użytkownika z istniejącym loginem.
 
-### 5. **Testy dla repozytorium `OrdersRepository`**
+### 5. **Testy dla repozytorium `OrdersRepository`** [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/repository/OrdersRepositoryIntegrationTest.java)
 Testy repozytorium `OrdersRepository` koncentrują się na operacjach związanych z zamówieniami użytkowników, takich jak dodawanie nowych zamówień, aktualizacja statusów oraz pobieranie zamówień na podstawie różnych kryteriów.
 
 #### Testy obejmują:
