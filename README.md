@@ -92,10 +92,10 @@ Testy dla kontrolera obsługującego kategorie.
    - Zwrot listy kategorii.
    - Status odpowiedzi: `200 OK`.
    - Sprawdzenie poprawności danych w odpowiedzi.
-2. **Kiedy kategorie nie istnieją**:
+2. **Kiedy kategorie nie istnieją**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/CategoriesControllerTest.java#L61-L73)
    - Zwrot pustej listy.
    - Status odpowiedzi: `200 OK`.
-3. **Logowanie**:
+3. **Logowanie**: [Zobacz w kodzie](https://github.com/DonutofDespair/Tijo_Projekt/blob/main/src/test/java/ua/restaurant/controller/CategoriesControllerTest.java#L75-L86)
    - Sprawdzenie wywołania logów w metodzie `getAllDishes`.
 
 ---
